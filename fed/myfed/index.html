@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>myfed</title>
+    <script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+  </head>
+  <body>
+    <div id="app"></div>
+    <button>获取json</button>
+    <!-- built files will be auto injected -->
+    <script>
+    $('button').click(function(){
+        $.ajax({
+            type:'POST',
+            url:'http://localhost:888/first',
+            headers:{
+                "Conten-Type":"http://localhost:3000/first"
+            },
+            success:function (backDate) {
+                // body...
+                console.log(backDate);
+            }
+        })
+    })
+</script>
+  </body>
+</html>
